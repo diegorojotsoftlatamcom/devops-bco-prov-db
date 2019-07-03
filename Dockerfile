@@ -3,6 +3,10 @@ FROM microsoft/mssql-server-linux:latest
 RUN apt-get -y update  && \
         apt-get install -y curl
 
+ENV ACCEPT_EULA Y
+ENV USER sa
+ENV SA_PASSWORD Yukon900
+	
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
