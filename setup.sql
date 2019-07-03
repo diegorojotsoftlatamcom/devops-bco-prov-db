@@ -1,5 +1,5 @@
-CREATE DATABASE Demo;
-USE Demo;
+-- CREATE DATABASE Demo;
+USE tempdb;
 CREATE TABLE Employees (legajo int PRIMARY KEY, dni int, name nvarchar(max));
 INSERT INTO Employees(legajo, dni, name) VALUES(1, 28695048, 'Diego Rojo');
 INSERT INTO Employees(legajo, dni, name) VALUES(2, 28695049, 'Diego Rojo 2');
