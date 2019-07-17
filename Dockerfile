@@ -35,7 +35,7 @@ ENV SA_PASSWORD Yukon900
 
 # Create app directory
 ENV APP_ROOT=/usr/src/app
-ENV OPT_SYSTEM=/var/opt/system
+# ENV OPT_SYSTEM=/var/opt/system
 
 # Bundle app source
 COPY . ${APP_ROOT}
@@ -44,9 +44,9 @@ RUN chmod -R u+x ${APP_ROOT} && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
 	
-	chmod -R u+x ${OPT_SYSTEM} && \
-    chgrp -R 0 ${OPT_SYSTEM} && \
-    chmod -R g=u ${OPT_SYSTEM} /etc/passwd && \
+	# chmod -R u+x ${OPT_SYSTEM} && \
+    # chgrp -R 0 ${OPT_SYSTEM} && \
+    # chmod -R g=u ${OPT_SYSTEM} /etc/passwd && \
 	
 	# Grant permissions for the import-data script to be executable
 	chmod +x ${APP_ROOT}/import-data.sh
