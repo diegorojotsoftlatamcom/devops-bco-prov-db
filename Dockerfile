@@ -37,15 +37,13 @@ RUN mkdir -p ${APP_ROOT}
 # Bundle app source
 COPY . ${APP_ROOT}
 
+# Grant permissions for the import-data script to be executable
 RUN chmod -R u+x ${APP_ROOT} && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
-	
 	chmod -R u+x ${OPT_ROOT} && \
     chgrp -R 0 ${OPT_ROOT} && \
     chmod -R g=u ${OPT_ROOT} /etc/passwd && \
-	
-	# Grant permissions for the import-data script to be executable
 	chmod +x ${APP_ROOT}/import-data.sh
 
 ### Containers should NOT run as root as a good practice
