@@ -17,7 +17,7 @@ LABEL name="tsoft/sqlserver" \
       io.k8s.description="Sql server" \
       io.k8s.display-name="Sql server" \
       io.openshift.expose-services="" \
-      io.openshift.tags="tsoft,sql,sqlserver,microsoft"
+      io.openshift.tags="tsoft,sql,sqlserver,microsoft"'
 
 RUN apt-get -y update  && \
         apt-get install -y curl
